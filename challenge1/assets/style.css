@@ -1,0 +1,234 @@
+:root{
+    /* color */
+    --primaryColor: #F1F3FF;
+    --secondaryColor: #5CB85F;
+
+    /* Font */
+    --mainFont: 'Helvetica', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--mainFont);
+}
+
+.heading{
+    font-family: var(--mainFont);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.subheading{
+    font-family: var(--mainFont);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.paragraf{
+    font-family: var(--mainFont);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* HEADER */
+.header{
+    background-color: var(--primaryColor);
+}
+
+/* NAVBAR */
+*{
+    z-index: 2;
+}
+
+.navbar{
+    z-index: 3;
+    background-color: var(--primaryColor);
+}
+
+.nav-link{
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+.nav-link.active{
+    font-weight: 700;
+}
+
+.nav-link:hover{
+    color: var(--secondaryColor);
+}
+
+.button-regist{
+    background-color: var(--secondaryColor);
+    color: white;
+    width: 81px;
+    height: 36px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+/* HERO SECTION */
+#hero{
+    background-color: var(--primaryColor);
+    height: 80vh;
+    width: 100%;
+    padding: 0px;
+}
+
+.img-car{
+    height: 100vh;
+    width: 100vh;
+}
+
+.hero-tagline h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 52px;
+}
+
+.hero-tagline p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    width: 80%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.button-hero{
+    background-color: var(--secondaryColor);
+    color: white;
+    width: 140px;
+    height: 36px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* OUR SERVICE SECTION */
+#our{
+    padding: 100px 0;
+}
+.service-group h1{
+    font-size: 24px;
+    font-weight: 700;
+    width: 70%;
+}
+
+.service-group p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    width: 85%;
+}
+
+.icon{
+    height: 24px;
+    width: 24px;
+    padding: 4px;
+    color: #0D28A6;
+    background-color: #CFD4ED;
+    border-radius: 100%;
+}
+
+/* WHY US SECTION */
+#why{
+    padding: 100px 0;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sub-title{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-why{
+    width: 100%;
+    height: 196px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.color-icon{
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+
+.circle-icon-card1{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #F9CC00;
+}
+
+.circle-icon-card2{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #FA2C5A;
+}
+
+.circle-icon-card3{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #0D28A6;
+}
+
+.circle-icon-card4{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #5CB85F;
+}
+
+.card-why h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card-why p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* TESTIMONIAL SECTION */
+#testi{
+    padding: 100px 0;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sub-title{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* SECTION */
+.bg-start{
+    background-color: #0D28A6;
+}
+
+.button-start{
+    background-color: var(--secondaryColor);
+    color: white;
+    width: 140px;
+    height: 36px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+}
