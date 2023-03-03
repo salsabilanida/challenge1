@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Challenge 1</title>
 
@@ -12,10 +13,6 @@
         <!-- Custom CSS -->
         <link href="assets/style.css" rel="stylesheet">
         <!-- Icons -->
-        <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
-        <!-- <script src="https://kit.fontawesome.com/39aeeda451.js" crossorigin="anonymous"></script> -->
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/release/v.5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWplt77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ81WUE00s" crossorigin="anonymous"> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> -->
         <script src="https://unpkg.com/feather-icons"></script>
         <!-- Google Font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica:300,400,600,700,300italic,400italic,600italic">
@@ -23,15 +20,20 @@
     <body>
         <!-- HEADER -->
         <header class="header" id="header">
-            <nav class="navbar navbar-expand-lg position-fixed w-100">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/images/logo.svg" alt="" width="100" height="34">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+              <nav class="navbar navbar-expand-sm fixed-top">    
+                <div class="container-md">
+                <a href="#" class="navbar-brand">
+                    <img src="assets/images/logo.svg" alt="logo">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas-sm offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header w-100 align-items-center">
+                        <h3 class="mb-0">BCR</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item mx-2">
                                 <a class="nav-link active" href="#our">Our Service</a>
@@ -51,9 +53,11 @@
                         </div>
                     </div>
                 </div>
-              </nav>
+                </div>  
+            </nav>
         </header>
 
+        <!-- HERO SECTION -->
         <section id="hero">
             <div class="container h-100">
                 <div class="row h-100">
@@ -62,18 +66,21 @@
                         <p><span>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</span></p>
                         <button class="button-hero">Mulai Sewa Mobil</button>
                     </div>
+
+                    <div class="col-md-6 img-car-hero">
+                        <img src="assets/images/img_car.svg" alt="img-car" class="position-relative end-0 bottom-0 h-100 img-car">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="assets/images/img_car.svg" alt="" class="position-absolute end-0 bottom-0 h-100 img-car">
-                </div>
+                
             </div>
         </section>
 
+        <!-- OUR SERVICES -->
         <section class="our" id="our">
             <div class="container h-100">
                 <div class="row h-100">
-                    <div class="col-md-6">
-                        <img src="assets/images/img_service.svg" alt="" width="459" height="428">
+                    <div class="col-md-6 img-service">
+                        <img src="assets/images/img_service.svg" alt="img-service" width="459" height="428" class="position-relative">
                     </div>
                     <div class="col-md-6 my-auto service-group">
                         <h1>Best Car Rental for any kind of trip in (Lokasimu)!</h1>
@@ -103,12 +110,13 @@
             </div>
         </section>
 
+        <!-- WHY US -->
         <section class="why" id="why">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 why-title">
                         <h2 class="pb-2">Why Us?</h2>
-                        <span class="sub-title">Mengapa harus pilih Binar Car Rental?</span>
+                        <p class="sub-title">Mengapa harus pilih Binar Car Rental?</p>
                     </div>
                 </div>
 
@@ -164,6 +172,7 @@
             </div>
         </section>
 
+        <!-- TESTIMONY -->
         <section class="testi" id="testi">
             <div class="container">
                 <div class="row">
@@ -172,31 +181,237 @@
                         <span class="sub-title">Berbagai review positif dari para pelanggan kami</span>
                     </div>
                 </div>
-
-                <div>
-
+               
+                <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto p-5">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card mb-3 card-testimony">
+                                            <div class="row g-0 p-2">
+                                                <div class="col-md-4 my-auto d-block">
+                                                    <div class="img-testimony">
+                                                        <img src="assets/images/img_photo (1).png" alt="img-testimony1" class="mx-auto d-block">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 pt-3 pb-3">
+                                                    <div class="card-body">
+                                                        <div class="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                        </div>
+                                                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                                                        <h5>John Dee 32, Bromo</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card mb-3 card-testimony">
+                                            <div class="row g-0 p-2">
+                                                <div class="col-md-4 my-auto d-block">
+                                                    <div class="img-testimony">
+                                                        <img src="assets/images/img_photo (1).png" alt="img-testimony2" class="mx-auto d-block">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 pt-3 pb-3">
+                                                    <div class="card-body">
+                                                        <div class="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                        </div>
+                                                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                                                        <h5>John Dee 32, Bromo</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card mb-3 card-testimony">
+                                            <div class="row g-0 p-2">
+                                                <div class="col-md-4 my-auto d-block">
+                                                    <div class="img-testimony">
+                                                        <img src="assets/images/img_photo (2).png" alt="img-testimony3" class="mx-auto d-block">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 pt-3 pb-3">
+                                                    <div class="card-body">
+                                                        <div class="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                            <img src="assets/images/Star.svg" alt="rate">
+                                                        </div>
+                                                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”</p>
+                                                        <h5>John Dee 32, Bromo</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div>
+                                    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                    <button class="carousel-control-next position-absolute" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="start" id="start">
-            <div class="container">
-                <div class="container p-5 rounded-4 text-center d-flex flex-column justify-content-center align-items-center bg-start">
-                    <h1>Sewa Mobil di Semarang Sekarang</h1>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>    
-                        </div>
-                    </div>
+        <!-- CTA BANNER -->
+        <section class="cta" id="cta">
+            <div class="container cta-group">
+                <div class="container rounded-4 text-center d-flex flex-column justify-content-center align-items-center bg-start">
+                    <h2>Sewa Mobil di (Lokasimu) Sekarang</h2>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>    
                     <button class="button-start">Mulai Sewa Mobil</button>
-                    </div>
+                </div>
             </div>
         </section>
 
 
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <div class="container faq-container">
+                <div class="row">
+                    <div class="col-md-6 faq-tagline">
+                        <h3>Frequently Asked Question</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button faq-list" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Apa saja syarat yang dibutuhkan?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show faq-list" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, reprehenderit debitis! Quas ullam blanditiis culpa odio minima id eaque. Perferendis nostrum numquam blanditiis adipisci totam incidunt, explicabo dolor obcaecati non.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-list" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Berapa hari minimal sewa mobil lepas kunci?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse faq-list" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur molestias cumque, accusamus incidunt, non soluta modi fugiat reiciendis nesciunt perferendis porro inventore amet quidem nisi consectetur. Esse corporis cum soluta.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-list" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Berapa hari sebelumnya sabaiknya booking sewa mobil?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse faq-list" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vero vitae nesciunt obcaecati, expedita nam sunt adipisci, iure quasi harum consectetur possimus quae placeat odio velit eligendi ullam eum voluptatum!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-list" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Apakah Ada biaya antar-jemput?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse faq-list" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro amet illum culpa natus mollitia vero atque eius dicta similique, saepe cumque sed alias voluptates officia itaque adipisci totam hic debitis!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-list" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Apakah Ada biaya antar-jemput?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse faq-list" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, eius voluptas blanditiis facere ad minima nulla nostrum porro deserunt maxime ea fugiat dolorum esse eum deleniti iure quasi voluptatibus dolore!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer" id="footer">
+            <div class="container footer-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+                        <p>binarcarrental@gmail.com</p>
+                        <p>081-233-334-808</p>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h4>Our Service</h4>
+                        <h4>Why Us</h4>
+                        <h4>Testimonial</h4>
+                        <h4>FAQ</h4>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <p>Connect with us</p>
+                        <a href="https://www.facebook.com" target="_blank"><i data-feather="facebook" class="icon-connect"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i data-feather="instagram" class="icon-connect"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i data-feather="twitter" class="icon-connect"></i></a>
+                        <a href="https://www.gmail.com" target="_blank"><i data-feather="mail" class="icon-connect"></i></a>
+                        <a href="https://www.twitch.tv" target="_blank"><i data-feather="twitch" class="icon-connect"></i></a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p>Copyright Binar 2022</p>
+                        <img src="assets/images/logo.svg">
+                    </div>
+                </div>  
+            </div>  
+        </footer>
 
         <script>feather.replace()</script>
+       <script>
+  const myCarousel = document.getElementById('myCarousel')
+  myCarousel.addEventListener('slid.bs.carousel', function () {
+    const activeItem = this.querySelector(".active");
+    document.querySelector(".testi-img img").src = activeItem.getAttribute("data-img");
+    document.querySelector(".testi-img .circle").style.backgroundColor = activeItem.getAttribute("data-color");
+  })
+</script>
     </body>
 </html>
